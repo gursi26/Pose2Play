@@ -1,12 +1,10 @@
 def game_controller():  
-    import torch 
+    import torch, cv2, time, os
     from model import PoseClassification 
-    import cv2 
     from helper import extract_coordinates, move2keyboard
     import mediapipe as mp
-    import time 
 
-    model_path = '/Users/gursi/Desktop/Pose2Play/weights/trained_2.pt'
+    model_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'weights/trained_2.pt')
     model = PoseClassification(57,5)
     model.load_state_dict(torch.load(model_path, map_location='cpu'))
     model = model.eval()
