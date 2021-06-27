@@ -3,6 +3,7 @@ def game_controller():
     from model import PoseClassification 
     from helper import extract_coordinates, move2keyboard
     import mediapipe as mp
+    time.sleep(3)
 
     model_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'weights/trained_2.pt')
     model = PoseClassification(57,5)
@@ -12,7 +13,7 @@ def game_controller():
     move2id = {'no_move':0, 'hook':1, 'kick':2, 'special':3, 'crouch':4}
     id2move = {x:y for y,x in move2id.items()}
 
-    scale = 0.75
+    scale = 0.65
     font = cv2.FONT_HERSHEY_SIMPLEX
     fontScale = 0.75
     fontColor = (255,255,255)
