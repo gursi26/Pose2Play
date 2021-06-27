@@ -1,6 +1,6 @@
 # Pose2Play
 
-Pose2Play allows real, tangible actions to be converted into in-game actions, giving users a new way to play their favourite games
+Pose2Play allows real, tangible actions to be converted into in-game actions, giving users a new way to play their favourite games<br>
 This project was a submision for the DefHacks Worldwide 3.0 hackathon
 
 ![](tutorial_poses/demo.gif)
