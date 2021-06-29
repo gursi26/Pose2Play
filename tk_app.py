@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import *
 import tkinter.font as font
 from run import game_controller
-import os 
+import os, sys
 
 imgs_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'tutorial_poses')
 
@@ -129,9 +129,16 @@ LTitle.config(font =("Times New Roman", 30))
 LTitle.config(anchor=CENTER)
 LTitle.pack()
 
-OpenGame = Button(main,text = "New \n Game",command = game_controller,fg='black',bg='blue',pady=10,padx=50)
-OpenGame.place(x=165,y=200)
+def exit_game():
+    sys.exit(0)
+
+OpenGame = Button(main,text = "New \n Game",command = game_controller,fg='black',bg='blue',pady=10,padx=20)
+OpenGame.place(x=115,y=200)
 OpenGame['font']= font.Font(size=15, weight="bold")
+
+CloseGame = Button(main,text = "Close \n Game",command = exit_game,fg='black',bg='blue',pady=10,padx=20)
+CloseGame.place(x=265,y=200)
+CloseGame['font']= font.Font(size=15, weight="bold")
 
 GameRules = Button(main,text = "How Do You Play?",command = create_rules,fg='black',bg='blue',pady=7.5,padx=20)
 GameRules.place(x=175,y=350)
