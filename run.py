@@ -77,3 +77,5 @@ def game_controller():
 
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
+
+# run script
